@@ -5,6 +5,7 @@
 *TODO:* run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installatio
 
 PODS
+
 ![Pods](/answer-img/pods.PNG)
 
 SERVICES
@@ -20,7 +21,7 @@ SERVICES
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
 
-![Source](/answer-img/PrometheusDashboard.PNG)
+![Source](/answer-img/PrometheusDashboard.png)
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
@@ -41,18 +42,18 @@ SERVICES
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
-![Uptime-Error](/answer-img/dashboard_uptime_error.PNG)
+![Uptime-Error](/answer-img/dashboard_uptime_error.png)
 
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here.
 
-![Uptime-Error](/answer-img/jaegerUI.PNG)
+![Uptime-Error](/answer-img/jaegerUI.png)
 
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
 
-![Uptime-Error](/answer-img/jaeger.PNG)
+![Uptime-Error](/answer-img/jaeger.png)
 
 
 ## Report Error
