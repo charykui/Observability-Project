@@ -99,4 +99,4 @@ Description: The MongoDB resource in backend service is not accessible for it to
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
 
-![Uptime-Error](/answer-img/finaldashboard.PNG)
+![Uptime-Error](/answer-img/finaldashboard.png)
