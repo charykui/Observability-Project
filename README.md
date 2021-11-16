@@ -80,20 +80,20 @@ Description: The MongoDB resource in backend service is not accessible for it to
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 
-1.Uptime
+1. Uptime
   -Pod Uptime
   -Success Requests Percentage/second
   -Service Success 
-2.Error Rate
+2. Error Rate
   -Number of Errors/second
   -Error Response Rate/second
-3.Traffic
+3. Traffic
   -Number of Requests/second
   -Number of Successful Requests/0.5s
-4.Latency
+4. Latency
   -Response Time average
   -Resource Usage/Saturation
-5.Memory Usage 
+5. Memory Usage 
   -CPU Utilization 
   -Memory Utilization 
 
