@@ -5,8 +5,7 @@ metadata:
     prometheus.io/scrape: "true"
     prometheus.io/path: /metrics
     prometheus.io/port: trial
-  name: trial
-  namespace: observability
+  name: trial-app
 spec:
   replicas: 3
   selector:
@@ -28,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: trial
+  name: trial-service
 spec:
   selector:
     app: trial
@@ -48,11 +47,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: trial
+      app: trial-app
   endpoints:
   - port: trial
     path: /metrics
     interval: 15s
   namespaceSelector:
     matchNames:
-    - observability
+    - default

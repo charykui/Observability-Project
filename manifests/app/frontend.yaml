@@ -5,8 +5,7 @@ metadata:
     prometheus.io/scrape: "true"
     prometheus.io/path: /metrics
     prometheus.io/port: frontend
-  name: frontend
-  namespace: observability
+  name: frontend-app
 spec:
   replicas: 3
   selector:
@@ -28,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: frontend-service
 spec:
   selector:
     app: frontend
@@ -49,11 +48,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: frontend
+      app: frontend-app
   endpoints:
   - port: frontend
     path: /metrics
     interval: 15s
   namespaceSelector:
     matchNames:
-    - observability
+    - default

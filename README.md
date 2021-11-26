@@ -48,12 +48,12 @@ SERVICES
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here.
 
-![Uptime-Error](/answer-img/jaegerUI.png)
+![Jaeger-UI](/answer-img/jaegerUI.png)
 
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
 
-![Uptime-Error](/answer-img/jaeger.png)
+![Jaeger-metric](/answer-img/jaeger.png)
 
 
 ## Report Error
@@ -61,7 +61,7 @@ SERVICES
 
 TROUBLE TICKET
 
-Name: Backend-app - HTTP 500 error status
+Name:  HTTP 500 error status - Backend-app 
 
 Date: 12:11:2021 20:00pm
 
@@ -76,6 +76,10 @@ Description: The MongoDB resource in backend service is not accessible for it to
 
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name three SLIs that you would use to measure the success of this SLO.
+
+-Application uptime should be >= 99.999 % in period of one month
+-Successfull per service request should be >= 99.99% requests
+-All Services with successful responses should be  >= 99.99% requests
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
@@ -100,4 +104,4 @@ Description: The MongoDB resource in backend service is not accessible for it to
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
 
-![Uptime-Error](/answer-img/finaldashboard.png)
+![Final-Dashboard](/answer-img/finaldashboard.png)
