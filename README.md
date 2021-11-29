@@ -39,7 +39,7 @@ e
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
 
-![Uptime](/answer-img/uptime.PNG)
+![Uptime](/answer-img/uptime.png)
 
 
 ## Tracing our Flask App
