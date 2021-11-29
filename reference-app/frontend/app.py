@@ -1,19 +1,26 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, json
 from prometheus_flask_exporter import PrometheusMetrics
-from prometheus_flask_exporter.multiprocess import GunicornInternalPrometheusMetrics
-import os
-
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app, group_by='endpoint')
 
-gunicorn = "gunicorn" in os.environ.get("SERVER_SOFTWARE", "")
-if gunicorn:
-    metrics = GunicornInternalPrometheusMetrics(app)
-else:
-    metrics = PrometheusMetrics(app, group_by='path')
-    metrics.info("app_info", "Application Info", version="1.0.3")
+metrics.info('app_info', 'Application Info', version='1.0.3')
+
+metrics.register_default(
+    metrics.counter(
+        'by_path_counter', 'Request count by request paths',
+        labels={'path': lambda: request.path}
+    )
+)
+
+endpoint_counter = metrics.counter(
+    'endpoint_counter', 'Request count by endpoints',
+    labels={'endpoint': lambda: request.endpoint}
+)
+
 
 @app.route('/')
+@endpoint_counter
 def homepage():
     return render_template("main.html")
 
