@@ -6,11 +6,8 @@
 
 PODS
 
-![Pods](/answer-img/pods.PNG)
+![pods-services](/answer-img/all.PNG)
 
-SERVICES
-
-![Services](/answer-img/services.PNG)
 
 
 ## Setup the Jaeger and Prometheus source
@@ -25,7 +22,7 @@ SERVICES
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
-
+e
 -Service Level Indicator (SLI) is a measurement we use for the goal e.g uptime and traffic of an application
 -Service Level Objective (SLO) is a goal that we wants to reach e.g have an uptime of 99.9% during the month or 99.5% req/secs in a week
 
@@ -77,26 +74,27 @@ Description: The MongoDB resource in backend service is not accessible for it to
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name three SLIs that you would use to measure the success of this SLO.
 
--Application uptime should be >= 99.999 % in period of one month
--Successfull per service request should be >= 99.99% requests
--All Services with successful responses should be  >= 99.99% requests
+1.Uptime : uptime should be >= 99.999 % in period of one month
+2.Error Rate :All Services returning 20x HTTP status should be >=98% in a month
+             -Error per second <= 0.05% of the requests
+3.Traffic : Successfull per service request should be >= 99.99% requests in a month
+4.Memory Usage : Memory usage should be <=93% everytime in a month
+5.Latency :Average response time should be less than 0.75 seconds
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 
 1. Uptime
   -Pod Uptime
-  -Success Requests Percentage/second
-  -Service Success 
+  -Service Success response rate 
 2. Error Rate
-  -Number of Errors/second
+- -Number of status requests/minute
   -Error Response Rate/second
+  -requests per second
 3. Traffic
-  -Number of Requests/second
   -Number of Successful Requests/0.5s
 4. Latency
   -Response Time average
-  -Resource Usage/Saturation
 5. Memory Usage 
   -CPU Utilization 
   -Memory Utilization 
@@ -104,4 +102,4 @@ Description: The MongoDB resource in backend service is not accessible for it to
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
 
-![Final-Dashboard](/answer-img/finaldashboard.png)
+![Final-Dashboard](/answer-img/final-dashboard.png)
